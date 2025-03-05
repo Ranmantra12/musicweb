@@ -12,7 +12,11 @@ const app = express();
 
 app.use(express.json({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
+<<<<<<< HEAD
 app.use(cors({ origin: 'http://localhost:3000' }));
+=======
+app.use(cors({ origin: 'https://jade-cascaron-ba732e.netlify.app' }));
+>>>>>>> 128d4bd7632dc0d0d00e4a7d70f3cdc9c09a183b
 
 const URI = process.env.MONGODB_URI;
 mongoose
