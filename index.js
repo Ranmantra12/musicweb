@@ -12,7 +12,7 @@ const app = express();
 
 app.use(express.json({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
-app.use(cors({ origin: 'http://localhost:3000' }));
+// app.use(cors({ origin: 'http://localhost:3000' }));
 app.use(cors({ origin: 'https://jade-cascaron-ba732e.netlify.app' }));
 
 const URI = process.env.MONGODB_URI;
