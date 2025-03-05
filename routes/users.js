@@ -9,6 +9,7 @@ import { userProfile } from "../controllers/profile.js";
 import { changePassword } from "../controllers/change-password.js";
 import { deleteUser } from "../controllers/delete.js";
 import { authorizedRoutes } from "../auth/auth.js";
+import { updateUser } from "../controllers/updateUser.js";
 
 router.get("/login");
 router.post("/login", loginUser);
@@ -19,6 +20,7 @@ router.post("/register", registerUser);
 router.post("/is-token-valid", authorizedRoutes, isTokenValid);
 
 router.get("/profile", authorizedRoutes, userProfile);
+router.post("/update",authorizedRoutes,updateUser)
 
 router.post("/change-password", authorizedRoutes, changePassword);
 
